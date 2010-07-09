@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript snippets</title>
+        <meta charset="utf-8" />
+        <script type="text/javascript">
+            xhr = {};
+            (function(xhr) {
+                /**
+                 * Make an AJAX call
+                 */
+                xhr.GET = function (url) {
+                    var httpRequest;
+
+                    if (window.XMLHttpRequest) { // for non IE
+                        httpRequest = new XMLHttpRequest();
+                        if (httpRequest.overrideMimeType) {
+                            httpRequest.overrideMimeType('text/xml');
+                        }
+                    }
+                    else if (window.ActiveXObject) { // IE
+                        try {
+                            httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                        } 
+                        catch (e) {
+                            try {
+                                httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                            } 
+                            catch (e) {}
+                        }
+                    }
+
+                    if (!httpRequest) {
+                        throw "Something went wrong with XHR";
+                    }
+
+                    httpRequest.onreadystatechange = function() { xhr._readyStateChange(httpRequest); };
+                    httpRequest.open('GET', url, true); // async request with GET
+                    //httpRequest.open('GET', url, false); // sync request with GET
+                    httpRequest.send(''); //no params will be sent
+                }
+
+                xhr._readyStateChange = function(httpRequest) {
+                    if (httpRequest.readyState == 4) {
+                        if (httpRequest.status == 200) {
+                            return xhr._callback(httpRequest.responseText);
+                        } else {
+                            return xhr._callback('Request error');
+                        }
+                    }
+                }
+
+                xhr._callback = function (responseText){
+                    alert(responseText);
+                }
+            })(xhr);
+
+        </script>
+    </head>
+    <body>
+
+    <script type="text/javascript">
+        xhr.GET("mockData/foo.txt"); //make a call
+    </script>
+    </body>
+</html>
+
