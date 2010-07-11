@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        {% if userLogged %}
+            Hi {{ userLogged }}
+        {% else %}
+            You need to log in to see this page
+        {% end %}
+    </body>
+</html>
