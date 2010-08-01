@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-# Demonstrationg template usage of tornadoweb
+# Demonstrationg cookie and secure cookie usage of tornadoweb
 
 import tornado.httpserver
 import tornado.ioloop
 import tornado.web
 import time
 
-# handles main page 
+# demonstrates cookie usage
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         cookieName = "pyist";
