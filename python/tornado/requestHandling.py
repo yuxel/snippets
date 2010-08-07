@@ -13,7 +13,7 @@ class MainHandler(tornado.web.RequestHandler):
 # handles pages matches URI /another/someUriParam
 class AnotherHandler(tornado.web.RequestHandler):
     def get(self,uriParam):
-        self.write("This is another page with URI parameter + " + uriParam)
+        self.write("This is another page with URI parameter = " + uriParam)
 
 
 # handles pages matches /postTest/ and demonstrate getting request parameter
