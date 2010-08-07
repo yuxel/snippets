@@ -7,12 +7,13 @@ import tornado.web
 import tornado.locale
 import os
 
-# handles main page 
+# Turkish page
 class TRHandler(tornado.web.RequestHandler):
     def get(self):
         tornado.locale.set_default_locale('tr_TR')
         self.render("templates/translation.html")
 
+# English page
 class ENHandler(tornado.web.RequestHandler):
     def get(self):
         tornado.locale.set_default_locale('en_US')
