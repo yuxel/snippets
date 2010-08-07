@@ -1,0 +1,77 @@
+/* CSS for chat example */
+
+body {
+    font-size:11px;
+    background: #0b2f4e;
+}
+
+/* set margins 0 to elements used */
+body, div , img, ul, li, h3 {
+    margin:0;
+    padding:0;
+}
+
+.toCenter {
+    width:960px;
+    margin:0 auto;
+}
+
+.toLeft {
+    float:left;
+}
+
+.toRight {
+    float:right;
+}
+
+#logo {
+    background:url('images/logo.png') no-repeat 0 0;
+    width:261px;
+    height:75px;
+}
+
+
+ul, li {
+    list-style:none;
+}
+
+/* clear floats */
+.clear {
+    clear:both;
+}
+
+#message {
+    background:#9aacbb;
+    border:none;
+    width:530px;
+    height:40px;
+    margin-top:15px;
+    display:block;
+    float:left;
+    font-size:30px;
+    line-height:40px;
+    color:#FFF;
+}
+
+#submitButton {
+    height:42px;
+    border:none;
+    background:#ffd43b;
+    width:60px;
+    display:block;
+    float:left;
+    margin-top:15px;
+}
+
+#inbox {
+    margin-top:10px;
+    background:#FFF;
+    min-height:100px;
+    height:auto !important;
+    height:100px;
+    font-size:14px;
+    padding:10px;
+    max-height:500px;
+    overflow:auto;
+}
+
