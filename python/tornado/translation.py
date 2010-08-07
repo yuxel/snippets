@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Demonstrationg template usage of tornadoweb
+# Demonstrationg translation/locale usage of tornadoweb
 
 import tornado.httpserver
 import tornado.ioloop

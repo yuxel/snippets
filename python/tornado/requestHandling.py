@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Demonstrationg irequest handling of tornado web
+# Demonstrationg request handling of tornado web
 
 import tornado.httpserver
 import tornado.ioloop

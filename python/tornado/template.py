@@ -4,12 +4,17 @@
 import tornado.httpserver
 import tornado.ioloop
 import tornado.web
+import tornado.escape
 
 # handles main page 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         #we demonstrate this using a ?userLogged=userName parameter
         switchLoggedFromGet = self.get_argument("userLogged", False)
+
+        #remove html entities
+        switchLoggedFromGet = tornado.escape.xhtml_escape(switchLoggedFromGet)
+
         self.render("templates/main.html", title="Pyist.net", userLogged=switchLoggedFromGet)
 
 application = tornado.web.Application([
