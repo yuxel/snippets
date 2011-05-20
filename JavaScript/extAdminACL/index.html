@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>ACL test</title>
+        <link rel="stylesheet" type="text/css" href="../ext-3.3.1/resources/css/ext-all.css"/>
+        <script type="text/javascript" src="../ext-3.3.1/adapter/ext/ext-base.js"></script>
+        <script type="text/javascript" src="../ext-3.3.1/ext-all.js"></script>
+        <script type="text/javascript" src="js/history.js"></script>
+        <script type="text/javascript" src="js/core.js"></script>
+        <script type="text/javascript" src="js/pages/homePage.js"></script>
+        <script type="text/javascript" src="js/acl.js"></script>
+    </head>
+    <body>
+        <a href="#homepage.init">homepage->init()</a> <br/>
+        <a href="#homepage.onButtonClick">homepage->onSaveButtonClick()</a><br/>
+        <a href="#homepage.close">homepage->close()</a><br/>
+
+
+        <!-- Fields required for history management -->
+        <form id="history-form" class="x-hidden">
+            <input type="hidden" id="x-history-field" />
+            <iframe id="x-history-frame"></iframe>
+        </form>
+    </body>
+</html>
